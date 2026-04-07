@@ -19,3 +19,4 @@ Architectural and pipeline patterns for data systems.
 - Incremental load strategies
 - Partitioning strategies
 - Orchestration patterns (e.g. DAG design)
+- Standard Pipeline fetures (e.g kill switch)
