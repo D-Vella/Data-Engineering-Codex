@@ -6,7 +6,7 @@ Snippets, patterns, and notes for specific Python libraries.
 
 ## Index
 
-*No entries yet. Add a `.md` file here for each library topic.*
+* Requests
 
 ---
 
