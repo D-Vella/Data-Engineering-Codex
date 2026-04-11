@@ -124,6 +124,7 @@ COMMENT ON TABLE gold.customer_retention IS
 30-day rolling window. Refreshed daily at 06:00 UTC by the 
 customer_metrics pipeline.';
 ```
+> Note that while the linage system shoudl cover where the data for a table comes from, don't rely on it. I have known systems where it fails.
 
 **Column comments** should focus on anything not self-evident from the name — units, what null means, valid values, business definitions:
 
@@ -136,6 +137,9 @@ Null indicates insufficient history (fewer than 30 days of data).';
 ```
 
 **The key instinct:** even columns with obvious-seeming names like `is_active` or `status` need comments, because what those values *mean* in your specific business context is almost never as universal as it seems when you are writing them. Document the definition, not just the name.
+
+## Layer 3 — Catalog Level (Reporting Catalog Comments)
+Many reporting systems like Power BI, Tableau and SSRS have the ability to give a data source a description or commentary. Because these systems shouldn't be used for data engineering themselves the comments for these objects should allow someone to quickly and easily find the source object in another system. For example if the source is Unity Catalog in Databricks, you should give a fully qualified table name including workspace (if needed). 
 
 ---
 
